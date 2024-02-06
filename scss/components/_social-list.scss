@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.social-list {
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--size-900);
+
+  @include respond(lg) {
+    gap: var(--size-600);
+  }
+
+  & a:is(:hover, :focus) &__icon {
+    fill: var(--clr-primary-400);
+  }
+
+  &__icon {
+    width: var(--size-600);
+    aspect-ratio: 1;
+    fill: var(--clr-neutral-400);
+    transition: all 0.2s;
+  }
+}

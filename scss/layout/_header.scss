@@ -1,0 +1,35 @@
+@use '../abstracts/' as *;
+
+.header {
+  padding-top: 7.6875rem;
+
+  @include respond(lg) {
+    padding-top: 8rem;
+  }
+
+  &__container {
+    display: grid;
+    gap: var(--size-400);
+
+    & > *:not(.even-columns) {
+      justify-self: center;
+    }
+
+    & > .site-logo {
+      margin-bottom: var(--size-xxl);
+
+      @include respond(lg) {
+        margin-bottom: var(--size-xl);
+      }
+    }
+
+    & > .header__description {
+      margin-bottom: var(--size-lg);
+      max-width: 55ch;
+
+      @include respond(lg) {
+        font-size: var(--fs-600);
+      }
+    }
+  }
+}

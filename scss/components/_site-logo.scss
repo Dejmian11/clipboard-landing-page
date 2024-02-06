@@ -1,0 +1,18 @@
+@use '../abstracts/' as *;
+
+.site-logo {
+  --_size: var(--size);
+
+  & > svg {
+    width: var(--_size);
+    aspect-ratio: 1;
+  }
+
+  &--header {
+    --size: 7.8125rem;
+  }
+
+  &--footer {
+    --size: 3.4375rem;
+  }
+}

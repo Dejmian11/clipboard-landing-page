@@ -1,0 +1,182 @@
+@use '../abstracts/' as *;
+
+///// SNIPPETS SECTION ///////////////////////////////////////////
+.snippets-section {
+  display: grid;
+  gap: 4.0625rem;
+  padding-top: 10rem;
+
+  @include respond(lg) {
+    gap: 5rem;
+    padding-top: 9.375rem;
+  }
+
+  &__container {
+    display: grid;
+    gap: var(--size-xl);
+    justify-items: center;
+
+    @include respond(lg) {
+      grid-auto-flow: column;
+    }
+
+    @include respond(xl) {
+      gap: 6.875rem;
+    }
+  }
+
+  &__img {
+    @include respond(xl) {
+      min-width: 47rem;
+      margin-left: -12.5rem;
+    }
+  }
+
+  &__flow {
+    display: grid;
+    gap: var(--size-lg);
+    justify-items: center;
+
+    @include respond(lg) {
+      align-content: center;
+    }
+
+    @include respond(xl) {
+      gap: var(--size-xl);
+      padding-right: 5.9375rem;
+      margin-bottom: 6.125rem;
+    }
+
+    & > * {
+      display: grid;
+      gap: var(--size-300);
+      max-width: max(30ch, 80%);
+
+      @include respond(lg) {
+        gap: var(--size-200);
+        max-width: 33ch;
+        text-align: left;
+      }
+    }
+  }
+}
+
+///// DEVICES SECTION ///////////////////////////////////////////
+.devices-section {
+  display: grid;
+  justify-items: center;
+  gap: var(--size-xxl);
+  padding-top: 11.625rem;
+
+  @include respond(lg) {
+    gap: 6.25rem;
+    padding-top: 9.375rem;
+  }
+
+  &__img {
+    scale: 110%;
+
+    @include respond(lg) {
+      max-width: 50.6875rem;
+    }
+  }
+}
+
+///// FEATURES SECTION ///////////////////////////////////////////
+.features-section {
+  display: grid;
+  gap: 5.625rem;
+  padding-top: 6.5rem;
+
+  @include respond(lg) {
+    gap: 4.5rem;
+    padding-top: 6rem;
+  }
+
+  & > .section__header {
+    gap: var(--size-300);
+
+    @include respond(lg) {
+      gap: var(--size-500);
+    }
+  }
+
+  &__container {
+    display: grid;
+    gap: var(--size-xl);
+
+    @include respond(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--size-700);
+    }
+  }
+
+  &__feature {
+    display: grid;
+    justify-items: center;
+    gap: var(--size-400);
+
+    & > svg {
+      aspect-ratio: 1;
+    }
+
+    & > .icon-blacklist {
+      max-width: 2.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    & > .icon-text {
+      max-width: 2.25rem;
+      margin-block: 0.25rem 1.75rem;
+    }
+
+    & > .icon-preview {
+      max-width: 3.125rem;
+      margin-bottom: 1.0625rem;
+    }
+
+    & > p {
+      max-width: 35ch;
+    }
+  }
+}
+
+///// PARTNERS SECTION ///////////////////////////////////////////
+.partners-section {
+  padding-top: 8.1875rem;
+
+  @include respond(lg) {
+    padding-top: 9.375rem;
+  }
+
+  &__container {
+    display: grid;
+    justify-items: center;
+    gap: 3.6875rem;
+
+    @include respond(xl) {
+      grid-auto-flow: column;
+      align-items: center;
+    }
+
+    & > img {
+      max-width: 8.6875rem;
+
+      @include respond(lg) {
+        max-width: 10.3125rem;
+      }
+    }
+  }
+}
+
+///// DOWNLOAD SECTION ///////////////////////////////////////////
+.download-section {
+  display: grid;
+  gap: 2.875rem;
+  padding-block: 10.625rem;
+
+  @include respond(lg) {
+    gap: var(--size-lg);
+    padding-block: 9.375rem;
+  }
+}
