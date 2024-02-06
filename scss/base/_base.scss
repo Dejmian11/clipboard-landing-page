@@ -1,12 +1,12 @@
 @use '../abstracts/' as *;
 
 body {
-  background-image: url('assets/images/bg-header-mobile.png');
+  background-image: url('../assets/images/bg-header-mobile.png');
   background-size: 100%;
   background-position-x: center;
   background-repeat: no-repeat;
 
   @include respond(lg) {
-    background-image: url('assets/images/bg-header-desktop.png');
+    background-image: url('../assets/images/bg-header-desktop.png');
   }
 }
